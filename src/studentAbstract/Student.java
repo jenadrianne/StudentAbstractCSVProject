@@ -192,6 +192,7 @@ class CourseWorkStudent extends Student {
 	// Method to calculate weighted average and FinalGrade
 
 	void calculate() {
+		OverallMarks = 0.0;
 		OverallMarks += (Assign1 * 0.25) + (Assign2 * 0.25);
 		OverallMarks += Practicals * 0.20;
 		OverallMarks += FinalExam * 0.30;
@@ -289,6 +290,7 @@ class ResearchStudent extends Student {
 	// Method to calculate weighted average and FinalGrade
 	void calculate()
 	{
+		OverallMarks = 0.0;
 		OverallMarks += FinalOralPPT * 0.20;
 		OverallMarks += FinalThesis * 0.80;
 		
