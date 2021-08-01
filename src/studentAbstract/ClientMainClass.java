@@ -38,8 +38,14 @@ public class ClientMainClass {
 			    		  System.exit(0);
 			    		  break;
 			        case 2:
-			              sr.loadCourseWorkStudentMarks();
-			              sr.loadResearchStudentMarks();
+			        	System.out.print("\n Enter which type of Student (1-Coursework , 2-Research) : ");
+			    	   	  int type = scanners.nextInt();
+			    	   	  if(type==1) {
+				              sr.loadCourseWorkStudentMarks();
+			    	   	  }else if(type==2) {
+			    	   		 sr.loadResearchStudentMarks();
+			    	   	  }
+			             
 			              break; 
 			       case 3:
 			    	      System.out.println("\nEnter Student id to delete: "); 
@@ -185,6 +191,8 @@ public class ClientMainClass {
 	                		   stud.getstudentNumber(), stud.getBirthDate(), stud.getBirthMonth(), stud.getBirthYear(), ass1, ass2, prac, finalex);
 	                   
 	                   courseWorkStudent.calculate();
+	                   System.out.println("\nAdded Student :\n" + courseWorkStudent);
+	                   System.out.println("\n-----------\n");
 	                   studentList.set(index, courseWorkStudent);
 	               }
 
@@ -219,6 +227,9 @@ public class ClientMainClass {
 	                   ResearchStudent researchStudent = new ResearchStudent(stud.getTitle(), stud.getFirstName(), stud.getLastName(), 
 	                		   stud.getstudentNumber(), stud.getBirthDate(), stud.getBirthMonth(), stud.getBirthYear(), FinalOralPPT, FinalThesis);
 	                   researchStudent.calculate();
+	                   
+	                   System.out.println("\nAdded Student :\n" + researchStudent);
+	                   System.out.println("\n-----------\n");
 	                   studentList.set(index, researchStudent);
 	               }
 	           }
