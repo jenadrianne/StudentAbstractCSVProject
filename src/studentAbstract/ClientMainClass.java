@@ -184,6 +184,7 @@ public class ClientMainClass {
 	                   CourseWorkStudent courseWorkStudent = new  CourseWorkStudent(stud.getTitle(), stud.getFirstName(), stud.getLastName(),
 	                		   stud.getstudentNumber(), stud.getBirthDate(), stud.getBirthMonth(), stud.getBirthYear(), ass1, ass2, prac, finalex);
 	                   
+	                   courseWorkStudent.calculate();
 	                   studentList.set(index, courseWorkStudent);
 	               }
 
@@ -217,7 +218,7 @@ public class ClientMainClass {
 	               
 	                   ResearchStudent researchStudent = new ResearchStudent(stud.getTitle(), stud.getFirstName(), stud.getLastName(), 
 	                		   stud.getstudentNumber(), stud.getBirthDate(), stud.getBirthMonth(), stud.getBirthYear(), FinalOralPPT, FinalThesis);
-
+	                   researchStudent.calculate();
 	                   studentList.set(index, researchStudent);
 	               }
 	           }
